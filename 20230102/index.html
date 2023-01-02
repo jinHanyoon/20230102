@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20220102</title>
+    <script src="/js/main.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+        $(document).ready(function(){
+
+            $('.page01_text').eq(0).addClass('move')
+            $('.page01_button li').eq(0).addClass('color')
+            var current= 0
+         
+         
+            $('.menu a').eq(0).click(function(e){
+                e.preventDefault()
+                    $('.nav_menu li').fadeToggle(800)
+                        console.log('작동됨')
+                $('.nav_menu li').css({display:'block'})
+            })
+
+
+
+                    
+         
+            page01()
+                function page01(){
+            $('.page01_button li').click(function(){
+                var n= $(this).index()
+                console.log(n)
+                page01_move(n)
+
+
+                function page01_move(n){
+                    if(current == n) return;
+                    var nowImg =$('.page01_img li').eq(current);
+                    var nextImg = $('.page01_img li').eq(n);
+
+                    nowImg.css({left:'0%'}).stop().animate({left:'100%'})
+                    nextImg.css({left:'100%'}).stop().animate({left:'0%'})
+                    current = n
+                    $('.page01_text').removeClass('move')
+                    $('.page01_text').eq(n).addClass('move')
+
+                    $('.page01_button li').removeClass('color')
+                    $('.page01_button li').eq(n).addClass('color')
+
+
+                }
+            })
+        }
+        })
+
+    </script>
+
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="header_in">
+                <h1 class="logo">logo</h1>
+                <nav>
+                    <div class="nav_in">
+                        <ul class="nav_menu">
+                            <li>브랜드</li>
+                            <li>BEST</li>
+                            <li>이어폰</li>
+                            <li>이벤트</li>
+                            <li>고객센터</li>
+
+                        </ul>
+                    </div>
+                </nav>
+                <div class="menu">
+                    <a href="#">메뉴</a>
+                    <a href="#">로그인</a>
+
+                    
+                </div>
+            </div>
+        </header>
+        <section class="page01_se"> 
+                <div class="page01">
+                
+                    <div class="page01_button">
+                        <ul class="page01_btns">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <ul class="page01_img">
+                        <li>
+                            <div class="page01_text">
+                                <h1>한정판매</h1>
+                                <p>약 200만개 누적 판매 </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="page01_text">
+                                <h1>한정판매</h1>
+                                <p>약 200만개 누적 판매 </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="page01_text">
+                                <h1>한정판매</h1>
+                                <p>약 200만개 누적 판매 </p>
+                            </div>
+                        </li>
+                        <li>  <div class="page01_text">
+                            <h1>한정판매</h1>
+                            <p>약 200만개 누적 판매 </p>
+                        </div>
+
+                        </li>
+
+                    </ul>
+                </div>
+        </section>
+
+        <section page02_se>
+            <div class="page02">
+                <h1 class="page02_title">Best Item
+                    Best Item Best Item Best Item Best Item 
+                   </h1>
+                <div class="page02_content">
+                    <ul class="page02_list">
+                        <li>
+                            <img src="/imge/best_img1.png">
+                            <figure>
+                                <h1>CX 트루 와이어리스</h1>
+                                <p>119,000원</p>
+                            </figure>
+
+                        </li>
+                        <li>
+                            <img src="/imge/bestimg1_0.png">
+                            <figure>
+                                <h1>HD 300</h1>
+                                <p>88,000원</p>
+                            </figure>
+                        </li>
+                        <li>
+                            <img src="/imge/bestimg2_0.png">
+                            <figure>
+                                <h1>HD 280 PRO</h1>
+                                <p>223,000원</p>
+                            </figure>
+
+                        </li>
+                        <li>
+                            <img src="/imge/bestimg3_0.png">
+                            <figure>
+                                <h1>EW-D 835</h1>
+                                <p>55,0000원</p>
+                            </figure>
+                        </li>
+                        <li>
+                            <img src="/imge/store01_img01.png">
+                            <figure>
+                                <h1>HD 25</h1>
+                                <p>265,000원</p>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        <section class="page03_se">
+            <div class="page03">
+                <div class="page03_title">
+                    <img src="/imge/icons8-음악-노트-64.png">
+                    <h1>Sennheiser</h1>
+                    <p>주목! 헤드셋보다 가볍게!  풍부하게 채워지는 사운드</p>
+                    <a href="#">View more</a>
+                </div>
+                <ul class="page03_content">
+                    <li>
+                        <div class="page03_top_text">
+                            <p>new</p> 
+                        </div>
+                    <img src="/imge/best_img1.png">
+                    
+                    <figure>
+                        <span>#블루투스</span>
+                        <span>#이어폰</span>
+                        <span>#음질</span>
+                        <h1>CX 트루 와이어리스</h1>
+                                <p>119,000원</p>
+
+                    </figure>
+                    </li>
+                    <li>
+                        <div class="page03_top_text">
+                            <p>new</p> 
+                        </div>
+                    <img src="/imge/cx300.png">
+                    
+                    <figure>
+                        <span>#음질깡패</span>
+                        <span>#이어폰</span>
+                        <span>#음악</span>
+                        <h1>젠하이저 CX 300 2</h1>
+                        <p>240,000원 </p>
+                        
+
+                    </figure>
+                    </li>
+                    <li>
+                        <div class="page03_top_text">
+                            <p>new</p> 
+                        </div>
+                    <img src="/imge/pngegg.png">
+                    
+                    <figure>
+                        <span>#컬러</span>
+                        <span>#커스터마이징</span>
+                        <span>#이어폰</span>
+                        <h1>젠하이저 CX 3.0</h1>
+                        <p>199,000원 </p>
+                        
+
+                    </figure>
+                    </li>
+                    <li>
+                        <div class="page03_top_text">
+                            <p>new</p> 
+                        </div>
+                    <img src="/imge/store4_img.jpg">
+                    
+                    <figure>
+                        <span>#그레이</span>
+                        <span>#영롱</span>
+                        <span>#작업용</span>
+                        <h1>젠하이저 CX 300</h1>
+                        <p>163,000원 </p>
+                        
+
+                    </figure>
+                    </li>
+
+                </ul>
+            </div>
+
+        </section>
+        <section  class="page04_se">
+            <div class="page04">
+                <div class="page03_title">
+                    <img src="/imge/icons8-음악적으로-64.png">
+                    <h1>Sennheiser</h1>
+                    <p>30년 History, 최고의 음질 system</p>
+                    <a href="#">View more</a>
+                </div>
+                <div class="page04_left">
+                    
+                </div>
+                <div class="page04_right">
+            <ul class="page04_list">
+                <li>
+                    <img src="/imge/best_img1.png">
+                    <figure>
+                        <span>#블루투스</span>
+                        <span>#이어폰</span>
+                        <span>#음질</span>
+                        <h1>CX 트루 와이어리스</h1>
+                        <p>119,000원</p>
+
+                    </figure> 
+
+                </li>
+                <li>
+                    <img src="/imge/bestimg1_0.png">
+                    <figure>
+                        <span>#입문</span>
+                        <span>#가성비</span>
+                        <span>#추천제품</span>
+                        <h1>HD 300</h1>
+                        <p>88,000원</p>
+                    </figure> 
+
+
+                </li>
+                <li>
+                    <img src="/imge/bestimg2_0.png">
+                    <figure>
+                        <span>#상급자용</span>
+                        <span>#음질</span>
+                        <span>#작업실</span>
+                        <h1>HD 280 PRO</h1>
+                        <p>223,000원</p>
+                    </figure> 
+
+
+                </li>
+                <li>
+                    <img src="/imge/bestimg3_0.png">
+                    <figure>
+                        <span>#보컬</span>
+                        <span>#녹음기능</span>
+                        <span>#내구성</span>
+                        <h1>EW-D 835</h1>
+                        <p>55,0000원</p>
+                    </figure> 
+
+
+                </li>
+
+            </ul>                    
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="page05_se">
+            <div class="page05">
+                <div class="page03_title">
+                    <img src="/imge/tianjin-g9b0938693_1920.jpg">
+                    <h1>News & Event</h1>
+                    <p>젠하이저와 함께하는 이벤트!</p>
+                    <a href="#">View more</a>
+                </div>
+                <ul class="page05_list">
+                    <li>
+                        <h1>2023 뮤직페스티벌</h1>
+                
+                    </li>
+                    <li>
+                        <h1>젠하이저를 한층 더 즐기는 법</h1>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
